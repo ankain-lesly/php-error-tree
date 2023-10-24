@@ -1,0 +1,43 @@
+/* Animations */
+// Shake
+.anim-shake {
+  animation: anim-shake 300ms ease-in-out;
+}
+@keyframes anim-shake {
+  0%,
+  100% {
+    margin-left: 0;
+  }
+  20%,
+  80% {
+    margin-left: -15px;
+  }
+
+  40%,
+  60% {
+    margin-left: 15px;
+  }
+}
+// spin
+.anim-spin {
+  animation: anim-spin 1000ms linear infinite;
+}
+@keyframes anim-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// Grow
+.anim-grow {
+  animation: anim-grow 600ms ease;
+  &.infinite {
+    animation-iteration-count: infinite;
+  }
+}
+@keyframes anim-grow {
+  100% {
+    transform: scale(2.5);
+    color: cyan;
+  }
+}

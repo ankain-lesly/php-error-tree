@@ -1,0 +1,52 @@
+@import "index";
+
+.error-tree {
+  position: fixed;
+  inset: 0;
+  overflow: auto;
+  // background-color: $clr-danger;
+
+  &__head {
+    color: $clr-light;
+    font-weight: bold;
+    background: $gradient-bar;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+  &__body {
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    border: 2px solid $clr-text-muted;
+
+    tr,
+    td {
+      vertical-align: top;
+    }
+    td {
+      padding: 0.3em;
+      padding-right: 1rem;
+    }
+    tr {
+      padding-bottom: 2rem;
+    }
+    tr.head {
+      font-weight: 800;
+    }
+    .spacer {
+      background-color: black;
+      height: 2px;
+      td {
+        padding: 0;
+      }
+    }
+  }
+  .error .error-tree__footer {
+    text-align: center;
+  }
+}
+
+a {
+  color: $clr-warning;
+}
