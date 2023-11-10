@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{title}} - Error Tree</title>
+  <title><?= $context['title'] ?? "Application Runtime Error" ?> - Error Tree</title>
   <style>
     .anim-shake {
       -webkit-animation: anim-shake 300ms ease-in-out;
@@ -305,7 +305,8 @@
     .error-tree {
       position: fixed;
       inset: 0;
-      overflow: auto
+      overflow: auto;
+      background-color: var(--clr-dark);
     }
 
     .error-tree__head {
